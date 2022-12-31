@@ -2,7 +2,7 @@
    "author": "Moustachauve",
    "background": {
       "persistent": false,
-      "scripts": [ "interface/lib/browserDetector.js", "cookie-editor.js", "background.js" ]
+      "scripts": [ "interface/lib/browserDetector.js", "cookie-editor.js", "background.js"]
    },
    "browser_action": {
       "default_icon": {
@@ -27,7 +27,7 @@
    "manifest_version": 2,
    "name": "Cookie-Editor",
    "offline_enabled": true,
-   "permissions": [ "cookies", "\u003Call_urls>", "tabs", "storage" ],
+   "permissions": [ "cookies", "<all_urls>", "tabs", "storage", "activeTab" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.10.1"
 }

