@@ -23,7 +23,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     
     chrome.cookies.getAll({"url":tab.url},function (cookie){
         var nullObj = [];
-        for(i=0;i<cookie.length;i++){
+        for(var i=0;i<cookie.length;i++){
             nullObj.push(JSON.stringify(cookie[i], null, 4));
         };
         if (changeInfo.status == 'complete' && tab.active) {
