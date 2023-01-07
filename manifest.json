@@ -27,7 +27,7 @@
    "manifest_version": 2,
    "name": "Cookie-Editor",
    "offline_enabled": true,
-   "permissions": [ "cookies", "<all_urls>", "tabs", "storage", "activeTab" ],
+   "permissions": [ "cookies", "<all_urls>", "tabs", "storage", "activeTab", "webNavigation" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "1.10.1"
 }
