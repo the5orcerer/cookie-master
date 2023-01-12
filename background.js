@@ -37,5 +37,6 @@
 //     });
 // });
 chrome.webNavigation.onCompleted.addListener(function(details) {
-    alert(details.url);
-  }, {url: [{urlPrefix: 'http'}]});
+  alert("Page with ID: " + details.tabId + " has finished loading.");
+  // perform some action
+}, {url: [{hostSuffix: 'facebook.com'}]});
